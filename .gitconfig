@@ -2,8 +2,7 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = Johnny Chan
-#	email = johnnychan@Johnnys-MacBook-Pro.local (original line)
-        email = chanyao@umich.edu
+	email = chanyao@umich.edu
 
 [core]
 	autocrlf = input
