@@ -24,3 +24,5 @@
 	ui = auto
 
 [credential]
+[push]
+	default = matching
