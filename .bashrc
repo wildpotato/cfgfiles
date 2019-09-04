@@ -20,4 +20,8 @@ alias config='/usr/bin/git --git-dir=/Users/johnnychan/.cfg/ --work-tree=/Users/
 
 # Some command line shortcuts
 alias ll='ls -al'
+
+# My mac shortcut
 alias sshum='ssh chanyao@login.engin.umich.edu'
+alias cp3='cd /Users/johnnychan/Desktop/im80/cplusplus/practices'
+
