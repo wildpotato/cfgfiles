@@ -30,7 +30,7 @@ schw()
 {
 	WORD=$1
 	echo "-----------------------------------------------------"
-	echo "Searching for word $WORD in all C/C++ files..."
+	echo "Searching for word '$WORD' in all C/C++ files..."
 	echo "-----------------------------------------------------"
 	grep --color=always -nrw $WORD --include=*.{*.cpp,c,h} ./
 	echo "-----------------------------------------------------"
@@ -40,7 +40,7 @@ schp()
 {
 	PATTERN=$1
 	echo "-----------------------------------------------------"
-	echo "Searching for pattern $PATTERN in all C/C++ files..."
+	echo "Searching for pattern '$PATTERN' in all C/C++ files..."
 	echo "-----------------------------------------------------"
 	grep --color=always -nr $PATTERN --include=*.{*.cpp,c,h} ./
 	echo "-----------------------------------------------------"
@@ -51,7 +51,7 @@ replace()
 	OLD=$1
 	NEW=$2
 	echo "-----------------------------------------------------"
-	echo "Replacing $OLD with $NEW in all C/C++ files..."
+	echo "Replacing '$OLD' with '$NEW' in all C/C++ files..."
 	echo "-----------------------------------------------------"
 	files=`find . -type f -name "*.cpp" -o -name "*.h" -o -name "*.c"`
 	echo "Found and performing replacement in the following files:"
