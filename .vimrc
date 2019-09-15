@@ -6,7 +6,12 @@ set nocompatible        " not compatible with the old-fashion vi mode
 if has("win32")
   let plug_path="~/vimfiles/plugged"
 else
-  let plug_path="~/.vim/plugged"
+	let s:uname = system("uname")
+	if s:uname == "Darwin\n"
+		let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
+	else
+		let plug_path="~/.vim/plugged"
+	endif
 endif
 
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -240,7 +245,7 @@ map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 ""
 "" function from Henry to toggle tab size
 ""
-function TabToggle()
+function! TabToggle()
 	if &tabstop == 4
 		set tabstop=8
 		set softtabstop=8
