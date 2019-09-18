@@ -6,13 +6,15 @@ set nocompatible        " not compatible with the old-fashion vi mode
 if has("win32")
   let plug_path="~/vimfiles/plugged"
 else
-	let s:uname = system("uname")
-	if s:uname == "Darwin\n"
-		let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
-	else
-		let plug_path="~/.vim/plugged"
-	endif
+""		let s:uname = system("uname")
+""	if s:uname == "Darwin\n"
+""		let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
+""	else
+  let plug_path="~/.vim/plugged"
+""	endif
 endif
+
+
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
