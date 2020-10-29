@@ -32,7 +32,7 @@ schw()
 	echo "-----------------------------------------------------"
 	echo "Searching for word '$WORD' in all C/C++ files..."
 	echo "-----------------------------------------------------"
-	grep --color=always -nrw $WORD --include=*.{*.cpp,c,h} ./
+	grep --color=always -nrw $WORD --include=*.{cpp,c,h,hpp} ./
 	echo "-----------------------------------------------------"
 }
 
@@ -42,7 +42,7 @@ schp()
 	echo "-----------------------------------------------------"
 	echo "Searching for pattern '$PATTERN' in all C/C++ files..."
 	echo "-----------------------------------------------------"
-	grep --color=always -nr $PATTERN --include=*.{*.cpp,c,h} ./
+	grep --color=always -nr $PATTERN --include=*.{cpp,c,h,hpp} ./
 	echo "-----------------------------------------------------"
 }
 
@@ -56,7 +56,7 @@ replace()
 	files=`find . -type f -name "*.cpp" -o -name "*.h" -o -name "*.c"`
 	echo "Found and performing replacement in the following files:"
 	for i in $files; do
-		sed -i "" "s/$OLD/$NEW/g" $i
+		sed -i "s/$OLD/$NEW/g" "$i"
 	done
 	echo "$files"
 	echo "-----------------------------------------------------"
