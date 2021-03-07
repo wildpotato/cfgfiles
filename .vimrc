@@ -93,6 +93,8 @@ set tabstop=4           " tab size is 4
 set smartindent
 set smarttab
 
+"" specific indentation for specific file types
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
 ""
 "" Search settings
