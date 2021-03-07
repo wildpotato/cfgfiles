@@ -184,6 +184,7 @@ set noshowmode
 set laststatus=2
 if !has('gui_running')
   set t_Co=256
+  set background=dark
 endif
 
 let g:lightline = {
