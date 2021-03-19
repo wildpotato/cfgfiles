@@ -7,7 +7,8 @@
 [core]
 	autocrlf = input
 	whiltespace = cr-at-eol
-
+	pager = less -r # fixes git diff showing bunch of ESCs on Linux
+	
 [alias]
 	co = checkout
 	br = branch
