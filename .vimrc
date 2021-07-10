@@ -58,7 +58,7 @@ filetype plugin on      " enable filetype-specific plugins
 ""
 "" General settings
 ""
-colorscheme wombat256i
+"colorscheme wombat256i
 
 set number              " show line number
 set ruler               " show the cursor position all the time
@@ -160,7 +160,8 @@ vmap <tab> >gv
 vmap <s-tab> <gv
 
 " Do not move cursor on *
-nmap  <c-o>
+" TODO line below gives no mapping found error
+" nmap  <c-o>
 
 " Keep search matches in the middle of the window
 nmap n nzzzv
